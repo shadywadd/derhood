@@ -1,3 +1,5 @@
+print("hi test", tick())
+
 local startupArgs = ({...})[1] or {}
 
 if getgenv().library ~= nil then

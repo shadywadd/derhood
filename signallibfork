@@ -44,7 +44,7 @@
 	@class GoodSignal
 ]=]
 
-local EventHandlerUtils = require("EventHandlerUtils")
+
 
 -- Connection class
 local Connection = {}
@@ -215,10 +215,6 @@ function Signal.Fire<T...>(self: Signal<T...>, ...: T...): ()
 		-- any connections occuring during fire will be added to the _handerListHead and not be fired
 		-- in this round. Any disconnections in the chain will still work here.
 		local nextNode = rawget(connection, "_next")
-
-		if rawget(connection, "_signal") ~= nil then -- isConnected
-			EventHandlerUtils.fire(connection._memoryCategory, connection._fn, ...)
-		end
 
 		connection = nextNode
 	end

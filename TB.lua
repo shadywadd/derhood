@@ -169,7 +169,7 @@ end
 function connectTool(char)
     local tool = char:FindFirstChildOfClass("Tool")
     if not tool then warn('no tool') return end
-
+	if not WhitelistedTools[tool.Name] then return end
     local ammo = tool:FindFirstChild("Ammo")
     local maxAmmo = tool:FindFirstChild("MaxAmmo")
 
